@@ -1,13 +1,13 @@
-package = "kong-plugin-ejuoauthclient"
+package = "kong-plugin-ejudataauth"
 version = "1.0-1"
 source = {
-   url = "git://github.com/nixuw/ejuoauthclient",
+   url = "git://github.com/nixuw/ejudataauth",
    tag = "1.0",
 }
 description = {
-   summary = "OAuth client plugin",
+   summary = "data fetch auth plugin",
    detailed = [[
-      Help client to get the token.
+      Help client to get the data.
    ]],
    homepage = "https://github.com/nixuw",
    license = "MIT/X11"
@@ -19,8 +19,8 @@ dependencies = {
 build = {
    type = "builtin",
    modules = {
-      ["kong.plugins.ejuoauthclient.handler"] = "kong/plugins/ejuoauthclient/handler.lua",
-      ["kong.plugins.ejuoauthclient.schema"] = "kong/plugins/ejuoauthclient/schema.lua"
+      ["kong.plugins.ejudataauth.handler"] = "kong/plugins/ejudataauth/handler.lua",
+      ["kong.plugins.ejudataauth.schema"] = "kong/plugins/ejudataauth/schema.lua"
      },
 
    }
