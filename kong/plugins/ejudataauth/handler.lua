@@ -232,7 +232,7 @@ function ejudataauth:access(conf)
         local res, err = http:request_uri(conf.tokenURL, {
             method = "POST",
             headers = {
-                ["Content-Type"] = "application/x-www-form-urlencoded",
+                -- ["Content-Type"] = "application/x-www-form-urlencoded",
                 ["Authorization"] = "Basic ".. base64,
                 -- ["Accept"] = "application/json"
             },
