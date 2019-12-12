@@ -254,6 +254,9 @@ function ejudataauth:access(conf)
 
         if  res.status ~= ngx.HTTP_OK  then
             kong.log.err(cjson.encode(paramTable),"无权访问数据")
+            ngx.ctx.eju_dont_do_anything = true
+            return kong.response.exit(ngx.HTTP_FORBIDDEN, { message = "Your Request is not allowed" })
+
         end
 
 
