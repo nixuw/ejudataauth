@@ -237,7 +237,7 @@ function ejudataauth:access(conf)
                 ["Authorization"] = "Basic ".. base64,
                 -- ["Accept"] = "application/json"
             },
-            body = "&authctx=" .. authctx .. "&info=" .. scope  ,
+            body = '{"authctx":"' .. authctx .. '","scope":"' .. scope ..'"}' ,
             query = "break=1",
 
             keepalive_timeout = 60,
