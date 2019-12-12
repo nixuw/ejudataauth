@@ -233,6 +233,7 @@ function ejudataauth:access(conf)
             method = "POST",
             headers = {
                 -- ["Content-Type"] = "application/x-www-form-urlencoded",
+                ["Content-Type"] = "application/json",
                 ["Authorization"] = "Basic ".. base64,
                 -- ["Accept"] = "application/json"
             },
